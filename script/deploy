@@ -5,6 +5,8 @@ STATUS="$(git status)"
 
 if [[ $STATUS == *"nothing to commit"* ]]
 then
+    git config --global user.email "you@example.com"
+    git config --global user.name "CircleCI"
     git rm .gitignore
     git add public
     git commit -m "Remove .gitignore and add public to publish"
