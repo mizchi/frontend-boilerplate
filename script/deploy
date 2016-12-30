@@ -1,7 +1,5 @@
 #!/usr/bin/env sh
 
-yarn run build:production
-
 # Deploy to github pages
 STATUS="$(git status)"
 
