@@ -15,9 +15,11 @@ dependencies:
     - yarn run lint
     - yarn run flow
     - yarn run build
+
 test:
   override:
     - yarn run cover
+
 deployment:
   release:
     branch: release
