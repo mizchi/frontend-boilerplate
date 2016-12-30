@@ -6,14 +6,19 @@
     "build": "webpack",
     "watch": "webpack -w",
     "typecheck": "flow",
-    "lint": "eslint src"
+    "lint": "eslint src test",
+    "test": "NODE_ENV=test ava",
+    "cover": "nyc --reporter=lcov --reporter=text yarn test"
   },
   "dependencies": {
+    "ava": "^0.17.0",
     "babel-core": "^6.21.0",
+    "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.10",
     "babel-plugin-syntax-async-functions": "^6.13.0",
     "babel-plugin-transform-class-properties": "^6.19.0",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
     "babel-plugin-transform-flow-strip-types": "^6.21.0",
     "babel-plugin-transform-object-rest-spread": "^6.20.2",
     "babel-plugin-transform-react-jsx": "^6.8.0",
@@ -21,7 +26,13 @@
     "eslint-plugin-flowtype": "^2.29.1",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-react": "^6.8.0",
+    "istanbul": "^0.4.5",
     "webpack": "2.1.0-beta.25",
     "webpack-async-await": "^1.1.0"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ]
   }
 }

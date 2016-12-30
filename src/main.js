@@ -1,1 +1,2 @@
+/* flow */
 console.log("hello");

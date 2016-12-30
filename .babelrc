@@ -1,4 +1,5 @@
 {
+  "sourceMaps": "inline",
   "plugins": [
     "syntax-async-functions",
     "transform-decorators-legacy",
@@ -6,5 +7,10 @@
     "transform-object-rest-spread",
     "transform-react-jsx",
     "transform-flow-strip-types"
-  ]
+  ],
+  "env": {
+    "test": {
+      "plugins": ["transform-es2015-modules-commonjs"]
+    }
+  }
 }
