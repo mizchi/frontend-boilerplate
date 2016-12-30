@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+node_modules/.bin/csswring public/bundle.css > public/bundle.min.css
+mv public/bundle.min.css public/bundle.css
+
+node_modules/.bin/uglifyjs public/bundle.js > public/bundle.min.js
+mv public/bundle.min.js public/bundle.js
