@@ -11,6 +11,7 @@
     "watch:css": "postcss -w -c .postcssrc.json",
     "typecheck": "flow",
     "lint": "eslint src test",
+    "lint:fix": "eslint src test --fix",
     "test": "NODE_ENV=test ava",
     "cover": "nyc --reporter=lcov --reporter=text yarn test"
   },
