@@ -22,16 +22,22 @@
 ## Development
 
 ```sh
+# Run
 yarn install
-yarn run build:js   # Build
-yarn run watch:js   # Build by watching files
+yarn start          # Start localhost:3355
+
+# Tasks
 yarn run lint       # eslint
 yarn run typecheck  # flow
 yarn test           # Test in node
 yarn run cover      # Test with coverage
 ```
 
-`$ open public/index.html` to open your static html file.
+See package.json to learn others.
+
+## Recommended tools
+
+- Atom: linter, linter-eslint, linter-flow
 
 ## CircleCI and Deploy
 

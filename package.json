@@ -3,7 +3,7 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "start": "yarn run watch:css & yarn run watch:js & http-server public -p 3355",
+    "start": "yarn run watch:css & yarn run watch:js & http-server public -p 3355 -c-1",
     "build:js": "webpack",
     "build:js:production": "NODE_ENV=production webpack",
     "build:css": "postcss -c .postcssrc.json",
