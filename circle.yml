@@ -17,7 +17,7 @@ dependencies:
     - yarn run cover
     - yarn run build
 deployment:
-  master:
-    branch: master
+  release:
+    branch: release
     commands:
       - script/deploy
