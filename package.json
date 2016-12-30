@@ -8,7 +8,7 @@
     "build:js:production": "NODE_ENV=production webpack",
     "build:css": "postcss -c .postcssrc.json",
     "watch:js": "webpack -w",
-    "watch:css": "postcss --watch -c .postcssrc.json",
+    "watch:css": "postcss -w -c .postcssrc.json",
     "typecheck": "flow",
     "lint": "eslint src test",
     "test": "NODE_ENV=test ava",
