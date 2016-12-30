@@ -1,0 +1,26 @@
+{
+  "use": [
+    "postcss-import",
+    "postcss-custom-properties",
+    "postcss-custom-media",
+    "postcss-apply",
+    "postcss-nesting",
+    "postcss-flexbugs-fixes",
+    "autoprefixer",
+    "postcss-sorting"
+  ],
+  "input": "styles/main.css",
+  "output": "public/bundle.css",
+  "autoprefixer": {
+    "browsers": [
+      "ie >= 11",
+      "last 2 Edge versions",
+      "last 2 Firefox versions",
+      "last 2 Chrome versions",
+      "last 2 Safari versions",
+      "last 2 Opera versions",
+      "last 2 iOS versions",
+      "last 2 ChromeAndroid versions"
+    ]
+  }
+}
