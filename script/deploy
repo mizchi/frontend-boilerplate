@@ -5,9 +5,9 @@ STATUS="$(git status)"
 
 if [[ $STATUS == *"nothing to commit"* ]]
 then
-    sed -i "" '/public/d' ./.gitignore
-    git add .
-    git commit -m "Edit .gitignore to publish"
+    git rm .gitignore
+    git add public
+    git commit -m "Remove .gitignore and add public to publish"
     git subtree push --prefix public origin gh-pages
     ## does not work this
     # git push origin `git subtree split --prefix public master`:gh-pages --force
