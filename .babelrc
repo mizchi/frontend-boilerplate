@@ -11,6 +11,10 @@
   "env": {
     "test": {
       "plugins": ["transform-es2015-modules-commonjs"]
+    },
+    "production": {
+      "presets": ["es2015"],
+      "plugins": ["transform-runtime"]
     }
   }
 }

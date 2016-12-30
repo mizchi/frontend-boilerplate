@@ -14,7 +14,8 @@ dependencies:
     - yarn install
     - yarn run lint
     - yarn run flow
-    - yarn run build
+    - yarn run build:js
+    - yarn run build:css
 
 test:
   override:
@@ -24,4 +25,7 @@ deployment:
   release:
     branch: release
     commands:
+      - yarn run build:js:production
+      - yarn run build:css
+      - script/compress
       - script/deploy
