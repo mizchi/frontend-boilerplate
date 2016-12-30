@@ -1,2 +1,0 @@
-#!/usr/bin/env sh
-yarn run lint && yarn run flow && yarn run build

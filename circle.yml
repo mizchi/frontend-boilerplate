@@ -1,0 +1,22 @@
+machine:
+  node:
+    version: 6.9.2
+  environment:
+    PATH: "${PATH}:${HOME}/.yarn/bin"
+
+dependencies:
+  cache_directories:
+    - ~/.cache/yarn/
+    - ~/.yarn/
+  override:
+    - if [[ ! -e ~/.yarn/bin/yarn || $(yarn --version) != "${YARN_VERSION}" ]]; then curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version $YARN_VERSION; fi
+    - yarn install
+    - yarn run lint
+    - yarn run flow
+    - yarn run cover
+    - yarn run build
+deployment:
+  master:
+    branch: master
+    commands:
+      - script/deploy
