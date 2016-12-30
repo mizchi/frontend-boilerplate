@@ -2,6 +2,7 @@ machine:
   node:
     version: 6.9.2
   environment:
+    YARN_VERSION: 0.18.1
     PATH: "${PATH}:${HOME}/.yarn/bin"
 
 dependencies:
