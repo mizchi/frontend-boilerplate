@@ -1,6 +1,7 @@
+/* @flow */
 import foo from "../src/foo";
 import test from "ava";
 
-test("foo() is 1", t => {
+test(t => {
   t.is(foo(), 1);
 });

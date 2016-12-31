@@ -1,4 +1,4 @@
 /* @flow */
-export default function foo() {
+export default function foo(): number {
   return 1;
 }
