@@ -10,11 +10,18 @@
   ],
   "env": {
     "test": {
-      "plugins": ["transform-es2015-modules-commonjs"]
+      "plugins": [
+        "transform-es2015-modules-commonjs",
+        "transform-async-to-generator",
+        "transform-runtime"
+       ]
     },
     "production": {
       "presets": ["es2015"],
-      "plugins": ["transform-runtime"]
+      "plugins": [
+        "transform-async-to-generator",
+        "transform-runtime"
+      ]
     }
   }
 }
