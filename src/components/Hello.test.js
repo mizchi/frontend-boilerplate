@@ -7,5 +7,4 @@ import Hello from './Hello'
 test(async t => {
   const wrapper = shallow(<Hello />)
   t.is(wrapper.text(), 'Hello')
-  // t.pass()
 })
