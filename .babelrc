@@ -6,6 +6,8 @@
     }}]
   ],
   "plugins": [
+    "react-hot-loader/babel",
+    "dynamic-import-webpack",
     "transform-decorators-legacy",
     "transform-object-rest-spread",
     ["transform-runtime", {

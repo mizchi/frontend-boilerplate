@@ -1,14 +1,34 @@
 /* eslint-disable */
+const webpack = require('webpack')
 const AsyncAwaitPlugin = require('webpack-async-await')
+const path = require('path')
 
 module.exports = {
-  entry: './src/main.js',
+  entry: [
+    'react-hot-loader/patch',
+    'webpack-dev-server/client?http://localhost:3355',
+    'webpack/hot/only-dev-server',
+    './src/main.js'
+  ],
   output: {
-    path: 'public',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'public'),
+    publicPath: '/'
+  },
+  devServer: {
+    contentBase: 'public/',
+    historyApiFallback: true,
+    port: 3355,
+    hot: true
   },
   plugins: [
-    new AsyncAwaitPlugin({})
+    new AsyncAwaitPlugin({}),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+    }),
+    new webpack.NamedModulesPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
   ],
   module: {
     rules: [
