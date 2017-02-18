@@ -12,20 +12,17 @@ dependencies:
   override:
     - if [[ ! -e ~/.yarn/bin/yarn || $(yarn --version) != "${YARN_VERSION}" ]]; then curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version $YARN_VERSION; fi
     - yarn install
-    - yarn run lint
-    - yarn run typecheck
-    - yarn run build:js
-    - yarn run build:css
+    - yarn lint
+    - yarn typecheck
+    - yarn build
 
 test:
   override:
-    - yarn run cover
+    - yarn test:cover
 
 deployment:
   release:
     branch: release
     commands:
-      - yarn run build:js:production
-      - yarn run build:css
-      - script/compress
+      - yarn run build:production
       - script/deploy

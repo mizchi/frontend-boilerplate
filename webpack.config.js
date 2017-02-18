@@ -4,9 +4,21 @@
 const path = require('path')
 const webpack = require('webpack')
 const AsyncAwaitPlugin = require('webpack-async-await')
+const LicenseWebpackPlugin = require('license-webpack-plugin')
+
+const BASE_PLUGINS = [
+  new AsyncAwaitPlugin({}),
+  new webpack.DefinePlugin({
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+  })
+]
 
 module.exports = {
-  entry: [
+  entry: process.env.NODE_ENV === 'production'
+  ? [
+    './src/main.js'
+  ]
+  : [
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:3355',
     'webpack/hot/only-dev-server',
@@ -23,15 +35,28 @@ module.exports = {
     port: 3355,
     hot: true
   },
-  plugins: [
-    new AsyncAwaitPlugin({}),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+  plugins: process.env.NODE_ENV === 'production'
+  ? BASE_PLUGINS.concat([
+    new webpack.optimize.UglifyJsPlugin({
+      minimize: true,
+      sourceMap: false,
+      compressor: {
+        warnings: false
+      },
+      output: {
+        comments: false
+      }
     }),
+    new LicenseWebpackPlugin({
+      pattern: /^(.*)$/,
+      filename: 'licenses.txt'
+    })
+  ])
+  : BASE_PLUGINS.concat([
     new webpack.NamedModulesPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.HotModuleReplacementPlugin()
-  ],
+  ]),
   module: {
     rules: [
       {

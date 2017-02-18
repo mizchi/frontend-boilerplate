@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-node_modules/.bin/uglifyjs public/bundle.js > public/bundle.min.js
-mv public/bundle.min.js public/bundle.js

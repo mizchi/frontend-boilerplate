@@ -44,7 +44,6 @@
     "eslint-config-standard": "^6.2.1",
     "eslint-plugin-flowtype": "^2.30.0",
     "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-import-order": "^2.1.4",
     "eslint-plugin-promise": "^3.4.2",
     "eslint-plugin-react": "^6.10.0",
     "eslint-plugin-standard": "^2.0.1",
@@ -52,6 +51,7 @@
     "flow-runtime": "^0.5.0",
     "http-server": "^0.9.0",
     "istanbul": "^0.4.5",
+    "license-webpack-plugin": "^0.4.2",
     "mock-css-modules": "^1.0.0",
     "nyc": "^10.1.2",
     "postcss": "^5.2.14",
@@ -67,7 +67,6 @@
     "react-addons-test-utils": "^15.4.2",
     "react-hot-loader": "next",
     "style-loader": "^0.13.1",
-    "uglify-js": "^2.7.5",
     "webpack": "^2.2.1",
     "webpack-async-await": "^1.1.0",
     "webpack-dev-server": "^2.3.0"
