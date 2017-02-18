@@ -1,7 +1,7 @@
 [ignore]
-.*/node_modules/ava/.*.flow
 .*/node_modules/flow.*
 .*/node_modules/babel-plugin-flow.*
+.*/node_modules/stylelint.*
 
 [include]
 
