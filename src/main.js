@@ -1,2 +1,2 @@
 /* @flow */
-console.log("hello1a");
+console.log('hello')

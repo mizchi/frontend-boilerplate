@@ -1,0 +1,65 @@
+parser: babel-eslint
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+plugins:
+- flowtype
+- react
+- import
+env:
+  browser: true
+  node: true
+  es6: true
+extends:
+- standard
+- plugin:react/recommended
+- plugin:import/errors
+rules:
+  # add more rules
+  prefer-const: 2
+  no-unused-vars:
+  - 2
+  - argsIgnorePattern: ^_
+  no-multiple-empty-lines:
+  - 2
+  - max: 1
+  # import
+  import/newline-after-import: 2
+  import/imports-first: 2
+  import/prefer-default-export: 2
+  import/no-dynamic-require: 2
+  import/no-extraneous-dependencies: 2
+  import/no-mutable-exports: 2
+  import/no-commonjs: 2
+  # flow
+  flowtype/boolean-style: 2
+  flowtype/define-flow-type: 2
+  flowtype/delimiter-dangle:
+  - 2
+  - never
+  flowtype/generic-spacing:
+  - 2
+  - never
+  flowtype/no-dupe-keys: 2
+  flowtype/no-primitive-constructor-types: 2
+  flowtype/object-type-delimiter:
+  - 2
+  - comma
+  flowtype/require-parameter-type:
+  - 2
+  - excludeArrowFunctions: true
+  flowtype/require-return-type:
+  - 2
+  - excludeArrowFunctions: true
+  flowtype/require-valid-file-annotation:
+  - 1
+  - always
+  - annotationStyle: block
+  flowtype/space-after-type-colon: 2
+  flowtype/space-before-type-colon:
+  - 2
+  - never
+  flowtype/space-before-generic-bracket:
+  - 2
+  - never
+  flowtype/union-intersection-spacing: 2
