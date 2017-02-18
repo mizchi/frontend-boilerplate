@@ -1,7 +1,9 @@
-/* eslint-disable */
+/* eslint "flowtype/require-valid-file-annotation": 0 */
+/* eslint "import/no-commonjs": 0 */
+
+const path = require('path')
 const webpack = require('webpack')
 const AsyncAwaitPlugin = require('webpack-async-await')
-const path = require('path')
 
 module.exports = {
   entry: [
@@ -28,7 +30,7 @@ module.exports = {
     }),
     new webpack.NamedModulesPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
+    new webpack.HotModuleReplacementPlugin()
   ],
   module: {
     rules: [
