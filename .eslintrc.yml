@@ -4,8 +4,9 @@ parserOptions:
     jsx: true
 plugins:
 - flowtype
-- react
 - import
+- import-order
+- react
 env:
   browser: true
   node: true
@@ -33,6 +34,8 @@ rules:
   import/no-extraneous-dependencies: 2
   import/no-mutable-exports: 2
   import/no-commonjs: 2
+  # import-order
+  import-order/import-order: 2
   # flow
   flowtype/boolean-style: 2
   flowtype/define-flow-type: 2
