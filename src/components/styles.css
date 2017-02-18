@@ -1,0 +1,5 @@
+.Hello {
+  & .title {
+    color: #00f;
+  }
+}

@@ -27,16 +27,13 @@ yarn install
 yarn start          # Start localhost:3355 with watch:js and watch:css
 
 # Tasks
-yarn run watch:js   # Watch and build js for Chrome
-yarn run build:js   # Build js for Chrome
-yarn run build:js:production # Build js for IE11+
-yarn run watch:css  # Build css for Chrome
-yarn run watch:css  # Build js for IE11+
+yarn run watch     # Watch and build js for Chrome
+yarn run build     # Build js for Chrome
+yarn run build:production # Build js for IE11+
 yarn run lint       # eslint
-yarn run lint:fix   # eslint --fix
 yarn run typecheck  # flow
 yarn run test       # Test in node
-yarn run cover      # Test with coverage
+yarn run test:cover # Test with coverage
 
 script/deploy # Deploy to github-pages
 script/compress # Minify js and css before deploy

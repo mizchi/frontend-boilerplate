@@ -6,10 +6,12 @@
     }}]
   ],
   "plugins": [
-    "flow-runtime",
     "transform-decorators-legacy",
-    "transform-runtime",
-    "transform-object-rest-spread"
+    "transform-object-rest-spread",
+    ["transform-runtime", {
+      "polyfill": true,
+      "regenerator": true
+    }]
   ],
   "env": {
     "test": {
