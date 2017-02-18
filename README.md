@@ -1,8 +1,8 @@
-# Modern Client Project ver 20170218
+# Modern Client Project ver 20170219
 
 ## Concept
 
-- Linting by eslint and flow
+- Linting by eslint, stylelint and flow
 - Deploy gh-pages by CircleCI
 - Run test(ava) in node
 - Build for Chrome in development
@@ -10,10 +10,11 @@
 
 ## Stack
 
+- Framework: React, Redux
 - pakage manager: yarn
 - transpiler: babel
-- linter: eslint, flow
-- test runner: ava
+- linter: eslint, flow, stylelint
+- test runner: ava, enzyme
 - coverage tools: istanbul, nyc
 - builder: webpack
 - css: postcss
@@ -43,7 +44,7 @@ See package.json to learn others.
 
 ## Recommended tools
 
-- Atom: linter, linter-eslint, linter-flow
+- Atom: linter, linter-eslint, linter-flow, liter-stylelint
 
 ## CircleCI and Deploy
 
