@@ -1,0 +1,6 @@
+@import "normalize.css";
+@import "./variables/colors.css";
+
+body {
+  background-color: var(--myColor);
+}

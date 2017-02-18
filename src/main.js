@@ -4,6 +4,7 @@ import { AppContainer } from 'react-hot-loader'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './components/App'
+import './styles/init.css'
 
 const root = document.querySelector('.main')
 
