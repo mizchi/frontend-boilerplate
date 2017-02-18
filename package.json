@@ -8,6 +8,7 @@
     "build:production": "NODE_ENV=production webpack",
     "typecheck": "flow",
     "lint": "eslint src",
+    "lint:css": "stylelint src/**/*.css",
     "test": "NODE_ENV=test ava",
     "test:cover": "nyc --reporter=lcov --reporter=text yarn test"
   },
@@ -64,6 +65,8 @@
     "react-addons-test-utils": "^15.4.2",
     "react-hot-loader": "next",
     "style-loader": "^0.13.1",
+    "stylelint": "^7.8.0",
+    "stylelint-config-standard": "^16.0.0",
     "webpack": "^2.2.1",
     "webpack-async-await": "^1.1.0",
     "webpack-dev-server": "^2.3.0"
