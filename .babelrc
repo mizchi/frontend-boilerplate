@@ -1,12 +1,12 @@
 {
   "presets": [
-    "flow",
     "react",
     ["env", { "targets": {
       "Chrome": 56
     }}]
   ],
   "plugins": [
+    "flow-runtime",
     "transform-decorators-legacy",
     "transform-runtime",
     "transform-object-rest-spread"
@@ -19,11 +19,13 @@
         }}]
       ],
       "plugins": [
+        ["flow-runtime", {"assert": true}],
         "transform-async-to-generator"
       ],
     },
     "production": {
       "presets": [
+        "flow",
         ["env", { "targets": {
           "browsers": ["last 2 versions", "IE 11"]
         }}]
