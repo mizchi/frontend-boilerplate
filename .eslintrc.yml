@@ -23,6 +23,8 @@ rules:
   no-multiple-empty-lines:
   - 2
   - max: 1
+  # react
+  react/prefer-stateless-function: 2
   # import
   import/newline-after-import: 2
   import/imports-first: 2

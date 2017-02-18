@@ -14,6 +14,7 @@
   "env": {
     "test": {
       "presets": [
+        "react",
         ["env", { "targets": {
           "node": 6
         }}]
@@ -25,6 +26,7 @@
     },
     "production": {
       "presets": [
+        "react",
         "flow",
         ["env", { "targets": {
           "browsers": ["last 2 versions", "IE 11"]

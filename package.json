@@ -15,8 +15,12 @@
     "test": "NODE_ENV=test ava",
     "cover": "nyc --reporter=lcov --reporter=text yarn test"
   },
-  "dependencies": {},
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
   "ava": {
+    "babel": "inherit",
     "files": "src/**/*.test.js",
     "require": [
       "babel-register"
@@ -37,6 +41,7 @@
     "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "^6.23.0",
     "csswring": "^5.1.1",
+    "enzyme": "^2.7.1",
     "eslint": "^3.15.0",
     "eslint-config-standard": "^6.2.1",
     "eslint-plugin-flowtype": "^2.30.0",
@@ -58,6 +63,7 @@
     "postcss-import": "^9.1.0",
     "postcss-nesting": "^2.3.1",
     "postcss-sorting": "^2.0.1",
+    "react-addons-test-utils": "^15.4.2",
     "uglify-js": "^2.7.5",
     "watch": "^1.0.2",
     "webpack": "^2.2.1",
