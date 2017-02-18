@@ -1,12 +1,16 @@
 /* @flow */
 import React from 'react'
+import { Provider } from 'react-redux'
+import Counter from '../containers/Counter'
+import store from '../store'
 import Layout from './Layout'
-import Hello from './Hello'
 
 export default function App () {
   return (
-    <Layout>
-      <Hello />
-    </Layout>
+    <Provider store={store}>
+      <Layout>
+        <Counter />
+      </Layout>
+    </Provider>
   )
 }

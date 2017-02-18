@@ -12,16 +12,12 @@
     "test:cover": "nyc --reporter=lcov --reporter=text yarn test"
   },
   "dependencies": {
+    "@mizchi/match": "^1.0.4",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
-  },
-  "ava": {
-    "babel": "inherit",
-    "files": "src/**/*.test.js",
-    "require": [
-      "babel-register",
-      "mock-css-modules"
-    ]
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.2",
+    "redux": "^3.6.0",
+    "redux-promise": "^0.5.3"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.3",
@@ -70,5 +66,13 @@
     "webpack": "^2.2.1",
     "webpack-async-await": "^1.1.0",
     "webpack-dev-server": "^2.3.0"
+  },
+  "ava": {
+    "babel": "inherit",
+    "files": "src/**/*.test.js",
+    "require": [
+      "babel-register",
+      "mock-css-modules"
+    ]
   }
 }

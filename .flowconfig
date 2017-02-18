@@ -1,9 +1,12 @@
 [ignore]
 .*/node_modules/ava/.*.flow
+.*/node_modules/flow.*
+.*/node_modules/babel-plugin-flow.*
 
 [include]
 
 [libs]
+./decls
 
 [options]
 munge_underscores=true
