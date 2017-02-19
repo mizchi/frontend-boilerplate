@@ -1,6 +1,7 @@
 /* @flow */
 
-export type IncrementAction = { type: "INCREMENT"}
-export type DecrementAction = { type: "DECREMENT"}
+export type Pages = 'index' | 'edit'
+export type TransitionAction = { type: "TRANSITION", location: Pages}
 
-export type Action = IncrementAction | DecrementAction
+export type PageAction = TransitionAction
+export type Action = TransitionAction

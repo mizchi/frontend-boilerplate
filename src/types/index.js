@@ -3,13 +3,13 @@
 import type { Store as ReduxStore } from 'redux'
 import type { Action } from './action'
 
-export type CounterState = {
-  count: number
+export type PageState = {
+  location: 'index' | 'edit'
 }
 
 export type State = {
-  counter: CounterState
-};
+  page: PageState
+}
 
 export type Store = ReduxStore<State, Action>;
 
