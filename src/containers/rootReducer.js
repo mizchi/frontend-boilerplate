@@ -1,7 +1,8 @@
 /* @flow */
 import { combineReducers } from 'redux'
-import page from './page'
+import app from './app/reducers'
+import home from './home/reducers'
 
 export default combineReducers({
-  page
+  app, home
 })
