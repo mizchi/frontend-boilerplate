@@ -6,7 +6,7 @@ import type { State, Action } from '../reducers/home-reducer.js'
 import Layout from '../components/Layout'
 import HomeContainer from './HomeContainer'
 
-function AppContainer (
+function App (
   _props: State & Dispatcher<Action>
 ) {
   return <Layout children={<HomeContainer/>}/>
@@ -14,4 +14,4 @@ function AppContainer (
 
 const connector: Connector<{}, State, Action> = connect(({ app }) => app)
 
-export default connector(AppContainer)
+export default connector(App)
