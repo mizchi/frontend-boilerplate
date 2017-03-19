@@ -1,7 +1,7 @@
 /* @flow */
 import { combineReducers } from 'redux'
-import app from './app/reducers'
-import home from './home/reducers'
+import app from './app-reducer'
+import home from './home-reducer'
 
 export default combineReducers({
   app, home

@@ -1,9 +1,9 @@
 /* @flow */
 import test from 'ava'
-import page from './index'
+import page from '../app-reducer.js'
 
 test('Reduce RESET', t => {
-  const initialState = { location: 'home', layoutType: 2 }
+  const initialState = {}
   const nextState = page(initialState, { type: 'RESET' })
   t.deepEqual(nextState, {})
 })

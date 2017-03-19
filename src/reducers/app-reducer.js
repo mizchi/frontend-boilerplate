@@ -10,18 +10,12 @@ export type Action =
     type: 'RESET'
   }
 
-export type State = {
-  location: 'home'
-}
+export type State = {}
 
-const initialState: State = {
-  location: 'home'
-}
+const initialState: State = {}
 
 export default (state: State = initialState, action: Action): State => {
   switch (action.type) {
-    case 'RESET':
-      return initialState
     default:
       return state
   }
