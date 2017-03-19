@@ -11,6 +11,7 @@
     "lint": "eslint src",
     "lint:css": "stylelint src/**/*.css",
     "test": "ava",
+    "test:ci": "yarn typecheck & yarn lint && yarn lint:css && yarn test:cover",
     "test:cover": "nyc --reporter=lcov --reporter=text yarn test"
   },
   "dependencies": {
@@ -28,7 +29,6 @@
   "devDependencies": {
     "@mizchi/babel-preset": "^1.0.1",
     "@mizchi/postcss-config": "^1.0.0",
-    "autoprefixer": "^6.7.7",
     "ava": "^0.18.1",
     "babel-core": "^6.24.0",
     "babel-loader": "^6.4.1",
