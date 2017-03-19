@@ -1,4 +1,4 @@
-# Modern Client Project ver 20170219
+# Forntend Boilerplate
 
 ## Concept
 
@@ -10,8 +10,8 @@
 
 ## Stack
 
-- Framework: React, Redux
-- pakage manager: yarn
+- Framework: react, redux, react-router
+- Pakage manager: yarn
 - transpiler: babel
 - linter: eslint, flow, stylelint
 - test runner: ava, enzyme
@@ -28,16 +28,15 @@ yarn install
 yarn start          # Start localhost:3355 with watch:js and watch:css
 
 # Tasks
-yarn run watch     # Watch and build js for Chrome
-yarn run build     # Build js for Chrome
-yarn run build:production # Build js for IE11+
-yarn run lint       # eslint
-yarn run typecheck  # flow
-yarn run test       # Test in node
-yarn run test:cover # Test with coverage
+yarn watch     # Watch and build js for Chrome
+yarn build     # Build js for Chrome
+yarn build:production # Build js for IE11+
+yarn lint       # eslint
+yarn typecheck  # flow
+yarn test       # Test in node
+yarn test:cover # Test with coverage
 
-script/deploy # Deploy to github-pages
-script/compress # Minify js and css before deploy
+yarn deploy # Deploy to github-pages
 ```
 
 See package.json to learn others.
