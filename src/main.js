@@ -6,7 +6,7 @@ import { Provider } from 'react-redux'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import store from './store'
-import App from './containers/App'
+import App from './components/App'
 
 const root = document.querySelector('.main')
 
@@ -14,7 +14,7 @@ if (process.env.NODE_ENV === 'production') {
   ReactDOM.render(<Provider store={store}><App/></Provider>, root)
 } else {
   const render = async () => {
-    const { default: App } = (await import('./containers/App'))
+    const { default: App } = (await import('./components/App'))
     ReactDOM.render(
       <AppContainer>
         <Provider store={store}>
@@ -25,5 +25,5 @@ if (process.env.NODE_ENV === 'production') {
     )
   }
   render()
-  if (module.hot) module.hot.accept('./containers/App', render)
+  if (module.hot) module.hot.accept('./components/App', render)
 }
