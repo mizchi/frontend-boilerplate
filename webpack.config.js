@@ -3,11 +3,9 @@
 
 const path = require('path')
 const webpack = require('webpack')
-const AsyncAwaitPlugin = require('webpack-async-await')
 const LicenseWebpackPlugin = require('license-webpack-plugin')
 
 const BASE_PLUGINS = [
-  new AsyncAwaitPlugin({}),
   new webpack.DefinePlugin({
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
   })

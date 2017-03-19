@@ -10,7 +10,7 @@
     "typecheck": "flow",
     "lint": "eslint src",
     "lint:css": "stylelint src/**/*.css",
-    "test": "NODE_ENV=test ava",
+    "test": "ava",
     "test:cover": "nyc --reporter=lcov --reporter=text yarn test"
   },
   "dependencies": {
@@ -26,55 +26,91 @@
     "redux-promise": "^0.5.3"
   },
   "devDependencies": {
+    "@mizchi/babel-preset": "^1.0.1",
+    "@mizchi/postcss-config": "^1.0.0",
     "autoprefixer": "^6.7.7",
     "ava": "^0.18.1",
     "babel-core": "^6.24.0",
-    "babel-eslint": "^7.1.1",
     "babel-loader": "^6.4.1",
-    "babel-plugin-dynamic-import-webpack": "^1.0.1",
-    "babel-plugin-flow-runtime": "^0.10.0",
-    "babel-plugin-transform-class-properties": "^6.23.0",
-    "babel-plugin-transform-decorators-legacy": "^1.3.4",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.2.2",
-    "babel-preset-flow": "^6.23.0",
-    "babel-preset-react": "^6.23.0",
     "css-loader": "^0.27.3",
     "enzyme": "^2.7.1",
     "eslint": "^3.18.0",
     "eslint-config-mizchi": "^1.0.0",
     "flow-bin": "^0.42.0",
-    "flow-runtime": "^0.10.0",
     "gh-pages": "^0.12.0",
-    "http-server": "^0.9.0",
     "istanbul": "^0.4.5",
     "license-webpack-plugin": "^0.4.3",
     "mock-css-modules": "^1.0.0",
     "normalize.css": "^5.0.0",
     "nyc": "^10.1.2",
     "postcss": "^5.2.16",
-    "postcss-apply": "^0.6.1",
     "postcss-cli": "^3.0.0",
-    "postcss-custom-media": "^5.0.1",
-    "postcss-custom-properties": "^5.0.2",
-    "postcss-flexbugs-fixes": "^2.1.0",
-    "postcss-import": "^9.1.0",
-    "postcss-loader": "^1.3.3",
-    "postcss-nesting": "^2.3.1",
-    "postcss-sorting": "^2.0.1",
     "react-addons-test-utils": "^15.4.2",
     "react-hot-loader": "next",
     "style-loader": "^0.14.1",
     "stylelint": "^7.9.0",
     "stylelint-config-standard": "^16.0.0",
     "webpack": "^2.2.1",
-    "webpack-async-await": "^1.1.0",
     "webpack-dev-server": "^2.4.2"
   },
+  "babel": {
+    "env": {
+      "development": {
+        "presets": [
+          "@mizchi/babel-preset",
+          [
+            "env",
+            {
+              "targets": {
+                "Chrome": 57
+              },
+              "exclude": [
+                "transform-regenerator"
+              ]
+            }
+          ]
+        ],
+        "plugins": [
+          "react-hot-loader/babel"
+        ]
+      },
+      "production": {
+        "presets": [
+          "@mizchi/babel-preset",
+          [
+            "env",
+            {
+              "targets": {
+                "browsers": [
+                  "last 2 versions",
+                  "IE 11"
+                ]
+              }
+            }
+          ]
+        ]
+      }
+    }
+  },
   "ava": {
-    "babel": "inherit",
+    "babel": {
+      "presets": [
+        "@mizchi/babel-preset",
+        [
+          "env",
+          {
+            "targets": {
+              "node": 7.7
+            },
+            "exclude": [
+              "transform-regenerator"
+            ],
+            "modules": "commonjs"
+          }
+        ]
+      ]
+    },
     "files": "src/**/*.test.js",
     "require": [
       "babel-register",

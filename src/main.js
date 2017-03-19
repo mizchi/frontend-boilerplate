@@ -1,5 +1,4 @@
 /* eslint "flowtype/require-valid-file-annotation": 0 */
-import 'babel-polyfill'
 import './styles/init.css'
 import { AppContainer } from 'react-hot-loader'
 import { Provider } from 'react-redux'
